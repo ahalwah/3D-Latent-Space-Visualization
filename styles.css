@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents scrollbars */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Add this to stack the header and container vertically */
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 35px;
+    color: #333;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 80px); /* Adjust for header height */
+}
+
+#page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#controls {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1; /* Ensure controls are above the canvas */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 10px; /* Add space between children */
+}
+
+#p5-canvas {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    margin-left: 10px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.control-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+}
+
+.control-input {
+    width: 50px;
+    margin-left: 10px; /* Space between the input and the previous element */
+    margin-right: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+}
+
+.reset-sphere-button {
+    width: 160px;
+}
+
+.hidden-file-input {
+    display: none; /* Hide the file input */
+}
+
+.load-csv-button {
+    width: 120px;
+}
+
+button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.points-in-sphere-label {
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px; /* Match font size */
+    margin-top: 10px; /* Add margin-top for spacing */
+}
+
+.point-slider {
+    width: 100%;
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ccc;
+    background: rgb(200, 200, 200); /* Grayscale background color */
+    margin-top: 10px;
+    align-self: center; /* Center the image container within the controls */
+}
+
+.x-letter {
+    color: red;
+}
+
+.y-letter {
+    color: green;
+}
+
+.z-letter {
+    color: blue;
+}
